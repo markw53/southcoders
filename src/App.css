@@ -1,66 +1,78 @@
-/* App.css */
-
-/* Dark mode setup */
-@layer base {
-  :root {
-    --primary-color: #1a1a1a;
-    --secondary-color: #2d2d2d;
-    --text-color: #e0e0e0;
-    --accent-color: #00bcd4;
-  }
+/* Reset some default styles */
+body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, button {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
 }
 
-/* Global styles */
 body {
-  @apply bg-[var(--primary-color)] text-[var(--text-color)] dark:bg-black dark:text-white;
-  font-family: 'Inter', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  line-height: 1.6;
 }
 
-/* Header styles */
-header {
-  @apply bg-[var(--secondary-color)] text-white p-6 flex justify-between items-center shadow-lg;
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
 }
 
-.nav-links {
-  @apply flex space-x-6 text-lg font-medium;
+.header {
+  background-color: #222;
+  color: white;
+  padding: 15px 0;
+  text-align: center;
+  font-size: 24px;
 }
 
-.nav-links a {
-  @apply hover:text-[var(--accent-color)] transition-colors duration-300;
+.nav {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 10px 0;
+  background: #333;
 }
 
-/* Hero section */
+.nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 18px;
+  padding: 5px 10px;
+}
+
+.nav a:hover {
+  background: #444;
+  border-radius: 5px;
+}
+
 .hero {
-  @apply flex flex-col items-center justify-center text-center min-h-[70vh] px-6;
+  text-align: center;
+  padding: 50px 20px;
+  background: linear-gradient(to right, #007bff, #00c6ff);
+  color: white;
+  border-radius: 10px;
 }
 
-.hero h1 {
-  @apply text-5xl font-extrabold text-white;
+.button {
+  display: inline-block;
+  padding: 10px 20px;
+  background: #007bff;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+  transition: background 0.3s;
 }
 
-.hero p {
-  @apply mt-4 text-lg text-gray-300 max-w-2xl;
+.button:hover {
+  background: #0056b3;
 }
 
-/* Buttons */
-.button-primary {
-  @apply mt-6 bg-[var(--accent-color)] text-white px-6 py-3 rounded-lg text-lg font-semibold shadow-md transition-transform transform hover:scale-105;
-}
-
-/* Services section */
-.services {
-  @apply grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 py-20 px-6;
-}
-
-.service-card {
-  @apply bg-[var(--secondary-color)] p-6 rounded-lg shadow-md text-center transition-transform transform hover:scale-105;
-}
-
-.service-card h3 {
-  @apply text-xl font-bold text-white;
-}
-
-/* Footer */
-footer {
-  @apply bg-[var(--secondary-color)] text-gray-400 text-center p-6 mt-12;
+.footer {
+  text-align: center;
+  padding: 15px;
+  background: #222;
+  color: white;
+  margin-top: 20px;
 }

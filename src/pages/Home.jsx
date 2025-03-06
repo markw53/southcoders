@@ -1,14 +1,13 @@
-import React from "react";
-import { Link } from "react-router-dom";
+// src/pages/Home.js
+import React from 'react';
 
-const Home = () => {
-  return (
-    <section className="hero">
-      <h1>Innovative Software Solutions</h1>
-      <p>We specialize in Web Design, UI/UX, Mobile Apps, and Data Analytics.</p>
-      <Link to="/services" className="button-primary">Explore Our Services</Link>
-    </section>
-  );
-};
+function Home() {
+    return (
+        <section className="hero">
+            <h2>Welcome to Southcoders</h2>
+            <p>Your partner in software development excellence.</p>
+        </section>
+    );
+}
 
 export default Home;
